@@ -1,0 +1,33 @@
+package rules
+
+import com.songyan.drools.model.Student
+
+/**
+ * 一年级学生规则：年龄为8岁
+ */
+rule "classForOne"
+	when
+		student: Student(age ==8)
+	then
+		student.setClassName("一年级");
+	end
+
+/**
+ * 二年级学生规则：年龄为九岁
+ */
+rule "classForTwo"
+	when
+		student: Student(age==9)
+	then
+		student.setClassName("二年级");
+	end
+
+/**
+ * 三年级学生规则：年龄为10岁
+ */
+rule "classForThree"
+	when
+		student: Student(age==10)
+	then
+		student.setClassName("三年级");
+	end
